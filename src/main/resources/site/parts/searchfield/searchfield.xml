@@ -1,0 +1,18 @@
+<part>
+    <display-name>GSS search field</display-name>
+    <config>
+        <field-set name="options">
+          <label>Options</label>
+          <items>
+              <input name="searchResultPageId" type="ContentSelector">
+                  <label>Search result page</label>
+                  <occurrences minimum="0" maximum="1"/>
+              </input>
+              <input name="autoComplete" type="checkbox">
+                  <label>Auto complete</label>
+                  <occurrences minimum="0" maximum="1"/>
+              </input>
+            </items>
+        </field-set>
+    </config>
+</part>

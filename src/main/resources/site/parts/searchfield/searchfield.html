@@ -1,0 +1,10 @@
+
+<div class="gss-search-field">
+    <gss data-th-if="${resultPageUrl}" data-th-remove="tag">
+        <gcse:searchbox-only data-th-attr="__${attributes}__"></gcse:searchbox-only>
+    </gss>
+
+    <gss data-th-unless="${resultPageUrl}" data-th-remove="tag">
+        <gcse:search data-th-attr="__${attributes}__"></gcse:search>
+    </gss>
+</div>
