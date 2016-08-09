@@ -17,7 +17,7 @@ exports.getHeaderScript = function(p){
     var asyncs = exports.isSet(p.async)? p.async : 'true';
 
     return "<script>(function() { \
-      var cx = '" +  exports.required(p, 'gssSearchEngineId') + "'; \
+      var cx = '" +  exports.required(p, 'googleCustomSearchEngineId') + "'; \
       var gcse = document.createElement('script'); \
       gcse.type = 'text/javascript'; \
       gcse.async = " + asyncs + "; \

@@ -1,0 +1,13 @@
+<fragment data-th-fragment="field (fields)" data-th-remove="tag">
+    <each data-th-each="field : ${fields}" data-th-remove="tag">
+
+        <if data-th-if="${field.clickable} and ${field.htmltag} != 'a'" data-th-remove="tag">
+            <a data-th-href="${field.clickableLink}">
+                <include data-th-replace="./fragment-elements.html :: switch (${field})" />
+            </a>
+        </if>
+        <if data-th-if="${not(field.clickable)} or ${field.htmltag} == 'a'" data-th-remove="tag">
+            <include data-th-replace="./fragment-elements.html :: switch (${field})" />
+        </if>
+    </each>
+</fragment>

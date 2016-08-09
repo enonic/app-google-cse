@@ -30,7 +30,7 @@ dependencies {
     include "com.enonic.xp:lib-thymeleaf:${xpVersion}"
     include "com.enonic.xp:lib-http-client:${xpVersion}"
     include "com.enonic.lib:util:1.1.1"
-    include project(':../lib-gss')
+    include "com.enonic:lib-cse:1.0.0"
 }
 
 repositories {

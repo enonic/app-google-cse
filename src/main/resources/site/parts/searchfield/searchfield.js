@@ -1,7 +1,7 @@
 var lib = {
     thymeleaf: require('/lib/xp/thymeleaf'),
     portal: require('/lib/xp/portal'),
-    gu: require('gss-util')
+    gu: require('cse-util')
 }
 
 
@@ -25,7 +25,7 @@ exports.get = function( req ){
     return {
         body: lib.thymeleaf.render(resolve('searchfield.html'), m),
         pageContributions: {
-            headEnd: lib.gu.isSet(sc.gssSearchEngineId) ? lib.gu.getHeaderScript({gssSearchEngineId: sc.gssSearchEngineId}) : ''
+            headEnd: lib.gu.isSet(sc.googleCustomSearchEngineId) ? lib.gu.getHeaderScript({googleCustomSearchEngineId: sc.googleCustomSearchEngineId}) : ''
         }
     }
 };

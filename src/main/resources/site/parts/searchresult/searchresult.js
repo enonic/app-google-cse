@@ -3,7 +3,7 @@ var lib = {
     util: require('/lib/enonic/util'),
     portal: require('/lib/xp/portal'),
     gss: require('/lib/gss'),
-    gu: require('gss-util')
+    gu: require('cse-util')
 }
 
 var settings = {
@@ -36,11 +36,10 @@ exports.get = function( req ){
     }
 };
 
-/*Soon to be used*/
+/* Soon to be used */
 function hasComponent(page, componentName){
     var regions = lib.util.data.forceArray(page.regions);
     for(var i = 0; i < regions.length; i ++){
         var components = lig.util.data.forecArray(regions[i].components);
-
     }
 }

@@ -1,4 +1,68 @@
 <part>
-    <display-name>GSS custom search result</display-name>
-    <config/>
+    <display-name>CSE custom search result</display-name>
+    <config>
+        <field-set name="general">
+            <label>General</label>
+            <items>
+                <input name="wrapper" type="ComboBox">
+                   <label>Wrapper</label>
+                   <occurrences minimum="0" maximum="1"/>
+                   <config>
+                      <option value="wrapper-article">article</option>
+                      <option value="wrapper-div">div</option>
+                      <option value="wrapper-ol">ol > li</option>
+                      <option value="wrapper-ul">ul > li</option>
+                   </config>
+                </input>
+                <input type="TextLine" name="classes">
+                    <label>Classes</label>
+                    <occurrences minimum="0" maximum="1"/>
+                </input>
+            </items>
+        </field-set>
+        <item-set name="resultfield">
+            <label>Result field</label>
+            <occurrences minimum="0" maximum="0" />
+            <items>
+                <input name="field" type="ComboBox">
+                   <label>Field</label>
+                   <occurrences minimum="0" maximum="1"/>
+                   <config>
+                      <option value="cacheId">Cache Id</option>
+                      <option value="displayLink">Display link</option>
+                      <option value="formattedUrl">Formatted Url</option>
+                      <option value="htmlTitle">Html title</option>
+                      <option value="htmlSnippet">Html Snippet</option>
+                      <option value="htmlFormattedUrl">Html formatted url</option>
+                      <option value="kind">Kind</option>
+                      <option value="link">Link</option>
+                      <option value="title">Title</option>
+                      <option value="snippet">Snippet</option>
+                   </config>
+                </input>
+                <input name="htmltag" type="ComboBox">
+                   <label>Html tag to represent field</label>
+                   <occurrences minimum="0" maximum="1"/>
+                   <config>
+                      <option value="h2">h2</option>
+                      <option value="h3">h3</option>
+                      <option value="h4">h4</option>
+                      <option value="h5">h5</option>
+                      <option value="h6">h6</option>
+                      <option value="p">p</option>
+                      <option value="span">span</option>
+                      <option value="a">a</option>
+                    </config>
+                </input>
+                <input type="Checkbox" name="clickable">
+                    <label>Clickable</label>
+                    <occurrences minimum="0" maximum="1"/>
+                </input>
+                <input type="TextLine" name="classes">
+                    <label>Classes</label>
+                    <occurrences minimum="0" maximum="1"/>
+                </input>
+            </items>
+        </item-set>
+    </config>
 </part>

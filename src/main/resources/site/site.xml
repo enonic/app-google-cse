@@ -5,11 +5,11 @@
       <label>Config</label>
       <items>
         <input type="TextLine" name="googleApiKey">
-          <label>Google API Key</label>
+          <label>Google API key</label>
           <occurrences minimum="1" maximum="1"/>
         </input>
-        <input type="TextLine" name="gssSearchEngineId">
-          <label>GSS Searchengine ID</label>
+        <input type="TextLine" name="googleCustomSearchEngineId">
+          <label>Custom search engine ID</label>
           <occurrences minimum="1" maximum="1"/>
         </input>
       </items>

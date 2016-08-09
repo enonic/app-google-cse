@@ -1,0 +1,16 @@
+<!--/* switch */-->
+<div data-th-fragment="switch (item)" >
+    <switch data-th-switch="${item.htmltag}" data-th-remove="tag">
+
+        <h2 data-th-case="h2" data-th-class="${item.classes}" data-th-text="${item.value}" />
+        <h3 data-th-case="h3" data-th-class="${item.classes}" data-th-text="${item.value}" />
+        <h4 data-th-case="h4" data-th-class="${item.classes}" data-th-text="${item.value}" />
+        <h5 data-th-case="h5" data-th-class="${item.classes}" data-th-text="${item.value}" />
+        <h6 data-th-case="h6" data-th-class="${item.classes}" data-th-text="${item.value}" />
+
+        <p data-th-case="p" data-th-class="${item.classes}" data-th-text="${item.value}" />
+        <span data-th-case="span" data-th-class="${item.classes}" data-th-text="${item.value}" />
+        <a data-th-case="a" data-th-class="${item.classes}" data-th-href="${item.clickableLink}" data-th-text="${item.value}" />
+
+    </switch>
+</div>

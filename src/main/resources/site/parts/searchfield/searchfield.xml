@@ -1,5 +1,5 @@
 <part>
-    <display-name>GSS search field</display-name>
+    <display-name>CSE search field</display-name>
     <config>
         <field-set name="options">
           <label>Options</label>

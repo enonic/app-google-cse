@@ -1,32 +1,63 @@
 var lib = {
     thymeleaf: require('/lib/xp/thymeleaf'),
-    util: require('/lib/enonic/util'),
     portal: require('/lib/xp/portal'),
-    gss: require('/lib/gss')
+    cse: require('/lib/mockcse')
 }
 
-var settings = {
-    view: resolve('customSearchresult.html')
-}
 
-/*
-*   GET
-*/
 exports.get = function( req ){
 
     var siteConf = lib.portal.getSiteConfig();
+    var c = lib.portal.getComponent().config;
 
-    var result = lib.gss.search({
+    var result = lib.cse.search({
         googleApiKey: siteConf.googleApiKey,
-        gssSearchEngineId: siteConf.gssSearchEngineId,
+        googleCustomSearchEngineId: siteConf.googleCustomSearchEngineId,
         query: "contenttype"
     });
 
-    log.info("%s", JSON.stringify(result, null, 4));
+    var searchResult = JSON.parse(result.body);
 
-    var params = {};
+    var hits = mapResultToConfiguratedFields({
+        fields: c.resultfield,
+        items: searchResult.items
+    });
+
+    var m = {
+        hits: hits,
+        wrapper: c.wrapper,
+        wrapperClass: c.classes
+    };
 
     return {
-        body: lib.thymeleaf.render(settings.view, params)
+        body: lib.thymeleaf.render(resolve('customSearchresult.html'), m)
     }
 };
+
+
+
+function mapResultToConfiguratedFields(p){
+
+    var hits = [];
+
+    for( var i = 0; i < p.items.length; i++ ){
+        var item = [];
+
+        for(var k = 0; k < p.fields.length; k++){
+            var field = {
+                title: p.fields[k].title,
+                htmltag: p.fields[k].htmltag,
+                clickable: p.fields[k].clickable,
+                clickableLink: p.items[i]['link'],
+                classes: p.fields[k].classes,
+                value: p.items[i][p.fields[k].field],
+
+            };
+            item.push(field);
+        }
+        hits.push(item);
+    }
+
+    return hits;
+
+}
