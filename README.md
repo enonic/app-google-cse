@@ -49,4 +49,10 @@ This is the quickest way to add cse to your site. Simple add the search field pa
 If you want the search result on a different page, add the "CSE search result" part to the destination page, and link to it in the "CSE search field" part config.
 
 #### CSE custom search and result parts
-If you want to manage the css and behavior to the searchfield and result, you can use these parts. 
+<img style="float: right;" src="doc/images/searchResultOptionBonanza.png" title="Options bonanza: customise the search result">
+
+If you want to manage the css and behavior to the searchfield and result, you can use these parts. The custom search field provide an input and a submit/search button.
+
+The custom search result is a very flexible. You need to choose which fields from the search result, from google, you want to show. When you choose a field, you also choose what kind of html-tag this field is going to be wrapped in. Choose between h2 - h6, span, p and a tags. You can add classes to the tag as well. Also choose which html-tag is goin to wrap the results. Choose between ol, li, div or article.
+
+Add styling in your own app, that applies to the html elements and classes you set to make the search result exaclty how you want it.
