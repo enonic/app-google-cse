@@ -41,7 +41,7 @@ In the siteconfig for the app, apply your API-key and search engine id.
 
 ![Behold the glorious parts](doc/images/partsInAList.png)
 
-There are 2 sets of different parts to choose from. The CSE search and result parts, and the CSE custom search and result parts.
+There are 2 sets of parts to choose from. The CSE search and result parts, and the CSE *custom* search and result parts.
 
 #### CSE Search and result parts
 This is the quickest way to add cse to your site. Simple add the search field part to any page. Your settings in the [custom search engine console](https://cse.google.com) will manage how the search result will be shown.
