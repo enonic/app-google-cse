@@ -64,5 +64,36 @@
                 </input>
             </items>
         </item-set>
+        <item-set name="pagination">
+            <label>Pagination</label>
+            <occurrences minimum="0" maximum="1" />
+            <items>
+                <input type="Checkbox" name="show">
+                    <label>Show pagination</label>
+                    <occurrences minimum="0" maximum="1"/>
+                </input>
+                <input type="TextLine" name="previousText">
+                    <label>Previous-link text</label>
+                    <occurrences minimum="0" maximum="1"/>
+                </input>
+                <input type="TextLine" name="nextText">
+                    <label>Next-link text</label>
+                    <occurrences minimum="0" maximum="1"/>
+                </input>
+                <!-- Features postponed -->
+                <!--input name="wrapper" type="ComboBox">
+                   <label>Wrapper</label>
+                   <occurrences minimum="0" maximum="1"/>
+                   <config>
+                      <option value="wrapper-ol">ol > li</option>
+                      <option value="wrapper-ul">ul > li</option>
+                   </config>
+                </input>
+                <input type="TextLine" name="classes">
+                    <label>Classes</label>
+                    <occurrences minimum="0" maximum="1"/>
+                </input-->
+            </items>
+        </item-set>
     </config>
 </part>
