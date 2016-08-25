@@ -51,11 +51,11 @@ If you want the search result on a different page, add the "CSE search result" p
 
 #### CSE *custom* search and result parts
 
-If you want to manage the css and behavior of the searchfield and result, you can use the custom parts. The custom search field provide an input textfield and a submit/search button.
+If you want to manage the css and behavior of the searchfield and the result, you can use the custom parts. The custom search field provide an input textfield and a submit/search button.
 
 The searchresult part is flexible and lets you choose which html tags you want to wrap both the searchresult list and each hit with. By default, no fields from google is selected to show. You can choose which fields from the search result from google you want to show in the part config. When you choose a field, you will also choose what kind of html-tag this field is going to be wrapped in. Choose between h2 - h6, span, p and a tags. You can add classes to the tags as well.
 
-Add styling in your own apps css, that applies to the html elements and classes you set to make the search result exaclty how you want it.
+Add styling in your own apps css, that applies to the html elements and classes you set to make the search result exactly how you want it.
 
 ![Options bonanza: customise the search result with choosable options](doc/images/searchResultOptionBonanza.png)
 
