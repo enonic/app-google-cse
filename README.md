@@ -22,9 +22,9 @@ Install app-cse by deploying to the installation
 
 ### API-key and engine id
 
-To be able to get search result from Google, you need an api-key and a search engine id from Google. The api-key is obtained by setting up an credention at Googles [API manager](https://console.developers.google.com), and enabling the "custom search API".
+To be able to get search result from Google, you need an api-key and a search engine id from Google. The api-key is obtained by setting up a credential at Googles [API manager](https://console.developers.google.com), and enabling the "custom search API".
 
-Get the search engine id by register an engine at Googles [custom search engine console](https://cse.google.com).
+Get the search engine id by registering an engine at Googles [custom search engine console](https://cse.google.com).
 
 ![Google Api manager as of 2. august 2016](doc/images/google-api-manager-4aug2016.png)
 
@@ -34,12 +34,12 @@ Get the search engine id by register an engine at Googles [custom search engine 
 
 In the siteconfig for the app, apply your API-key and search engine id.
 
-![The app-cse site config](doc/images/siteConfig.png)
+![The app-cse siteconfigs modalwindow with two input fields for each key](doc/images/siteConfig.png)
 
 
 ### Parts
 
-![Behold the glorious parts](doc/images/partsInAList.png)
+![Behold the glorious parts in a list](doc/images/partsInAList.png)
 
 There are 2 sets of parts to choose from. The CSE search and result parts, and the CSE *custom* search and result parts.
 
@@ -57,7 +57,7 @@ The custom search result is a very flexible. You need to choose which fields fro
 
 Add styling in your own app, that applies to the html elements and classes you set to make the search result exaclty how you want it.
 
-![Options bonanza: customise the search result](doc/images/searchResultOptionBonanza.png)
+![Options bonanza: customise the search result with choosable options](doc/images/searchResultOptionBonanza.png)
 
 ##### CSE *custom* result part options
 
@@ -81,13 +81,13 @@ Add styling in your own app, that applies to the html elements and classes you s
 
 Googles searchresult fields available:
 
-            kind: "customsearch#result",
-            title: "lib-thymeleaf — Enonic XP 6.1 documentation",
-            htmlTitle: "lib-thymeleaf — Enonic XP 6.1 documentation",
-            link: "http://xp.readthedocs.io/en/6.1/reference/libraries/thymeleaf/index.html",
-            displayLink: "xp.readthedocs.io",
-            snippet: "var thymeleaf = require('/lib/xp/thymeleaf'). Thymeleaf also supports a set of View \nFunctions. The methods implemented in this library are listed below. render.",
-            htmlSnippet: "var thymeleaf = require(&#39;/lib/xp/thymeleaf&#39;). Thymeleaf also supports a set of <b>View</b> <br>\n<b>Functions</b>. The methods implemented in this library are listed below. render.",
-            cacheId: "PoeWLlrxwGsJ",
-            formattedUrl: "xp.readthedocs.io/en/6.1/reference/libraries/thymeleaf/index.html",
-            htmlFormattedUrl: "xp.readthedocs.io/en/6.1/reference/libraries/thymeleaf/index.html", 
+    kind: "customsearch#result",
+    title: "lib-thymeleaf — Enonic XP 6.1 documentation",
+    htmlTitle: "lib-thymeleaf — Enonic XP 6.1 documentation",
+    link: "http://xp.readthedocs.io/en/6.1/reference/libraries/thymeleaf/index.html",
+    displayLink: "xp.readthedocs.io",
+    snippet: "var thymeleaf = require('/lib/xp/thymeleaf'). Thymeleaf also supports a set of View \nFunctions. The methods implemented in this library are listed below. render.",
+    htmlSnippet: "var thymeleaf = require(&#39;/lib/xp/thymeleaf&#39;). Thymeleaf also supports a set of <b>View</b> <br>\n<b>Functions</b>. The methods implemented in this library are listed below. render.",
+    cacheId: "PoeWLlrxwGsJ",
+    formattedUrl: "xp.readthedocs.io/en/6.1/reference/libraries/thymeleaf/index.html",
+    htmlFormattedUrl: "xp.readthedocs.io/en/6.1/reference/libraries/thymeleaf/index.html", 
