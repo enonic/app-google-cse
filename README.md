@@ -39,7 +39,7 @@ In the siteconfig for the app, apply your API-key and search engine id.
 
 ### Parts
 
-![Behold the glorious parts in a list](doc/images/partsInAList.png)
+![Behold the glorious parts in a list](doc/images/partsInAlist.png)
 
 There are 2 sets of parts to choose from. The CSE search and result parts, and the CSE *custom* search and result parts.
 
