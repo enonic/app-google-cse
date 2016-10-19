@@ -15,6 +15,7 @@ buildscript {
 
 apply plugin: 'com.enonic.xp.app'
 apply plugin: 'maven-publish'
+  
 
 app {
     name = project.appName
