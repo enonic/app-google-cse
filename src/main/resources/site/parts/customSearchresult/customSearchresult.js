@@ -21,7 +21,6 @@ exports.get = function( req ){
 
     var searchResult = JSON.parse(result.body);
 
-    //log.info("%s", JSON.stringify(searchResult, null, 4));
     var body = "";
 
     if(cc.resultfield){

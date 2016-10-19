@@ -1,20 +1,17 @@
 
 <!--/* Wrappers */-->
-<ol data-th-fragment="wrapper-ol (items, wrapperClass)" data-th-class="${wrapperClass}">
-    <each data-th-each="item : ${items}" data-th-remove="tag">
-        <li>
-            <include data-th-replace="site/parts/customSearchresult/fragment-fields :: field (${item})" />
-        </li>
-    </each>
+
+<ol data-th-if="${wrapper == 'wrapper-ol'}" data-th-fragment="wrapper-ol (items, wrapperClass)" data-th-class="${wrapperClass}">
+    <li data-th-each="item : ${items}" data-th-remove="tag">
+        <include data-th-replace="site/parts/customSearchresult/fragment-fields :: field (${item})" />
+    </li>
 </ol>
 
 
-<ul data-th-fragment="wrapper-ul (items, wrapperClass)" data-th-class="${wrapperClass}">
-    <each data-th-each="item : ${items}" data-th-remove="tag">
-        <li>
-            <include data-th-replace="site/parts/customSearchresult/fragment-fields :: field (${item})" />
-        </li>
-    </each>
+<ul data-th-if="${wrapper == 'wrapper-ul'}" data-th-fragment="wrapper-ul (items, wrapperClass)" data-th-class="${wrapperClass}">
+    <li data-th-each="item : ${items}" data-th-remove="tag">
+        <include data-th-replace="site/parts/customSearchresult/fragment-fields :: field (${item})" />
+    </li>
 </ul>
 
 
