@@ -79,7 +79,7 @@ Add styling in your own apps css, that applies to the html elements and classes 
 | Previous link text | | Default text "previous page" |
 | Next link text | | Default text "next page" |
 
-Googles searchresult fields available:
+Googles searchresult fields available (sample):
 
     kind: "customsearch#result",
     title: "lib-thymeleaf — Enonic XP 6.1 documentation",

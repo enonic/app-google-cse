@@ -5,11 +5,12 @@
           <label>Options</label>
           <items>
               <input name="searchResultPageId" type="ContentSelector">
-                  <label>Search result page</label>
+                  <label>Optional search result page</label>
                   <occurrences minimum="0" maximum="1"/>
               </input>
               <input name="autoComplete" type="checkbox">
-                  <label>Auto complete</label>
+                  <label>Auto complete.</label>
+                  <!-- <help-text>Note: Newly enabled or added autocompletions may take several hours to appear.</help-text> -->
                   <occurrences minimum="0" maximum="1"/>
               </input>
             </items>

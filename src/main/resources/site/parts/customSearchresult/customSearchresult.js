@@ -1,4 +1,5 @@
 var lib = {
+    thymeleaf: require('/lib/xp/thymeleaf'),
     portal: require('/lib/xp/portal'),
     cse: require('/lib/cse'),
     cseutil: require('cse-util'),
@@ -20,29 +21,36 @@ exports.get = function( req ){
 
     var searchResult = JSON.parse(result.body);
 
-    log.info("%s", JSON.stringify(searchResult, null, 4));
+    //log.info("%s", JSON.stringify(searchResult, null, 4));
+    var body = "";
+
+    if(cc.resultfield){
+        var hits = mapResultToConfiguratedFields({
+            fields: lib.util.data.forceArray(cc.resultfield),
+            items: searchResult.items
+        });
 
 
-    var hits = mapResultToConfiguratedFields({
-        fields: lib.util.data.forceArray(cc.resultfield),
-        items: searchResult.items
-    });
+        var paninationData = createPageinationData({
+            sr: searchResult,
+            cc: cc
+        });
 
-    var paninationData = createPageinationData({
-        sr: searchResult,
-        cc: cc
-    });
+        var m = {
+            hits: hits,
+            wrapper: cc.wrapper,
+            wrapperClass: cc.classes,
+            pagination: paninationData
 
-    var m = {
-        hits: hits,
-        wrapper: cc.wrapper,
-        wrapperClass: cc.classes,
-        pagination: paninationData
+        };
+        body = lib.thymeleaf.render(resolve('customSearchresult.html'), m);
 
-    };
+    } else {
+        body = lib.thymeleaf.render(resolve('emptyCustomSearchResult.html'));
+    }
 
     return {
-        body: require('/lib/xp/thymeleaf').render(resolve('customSearchresult.html'), m)
+        body: body //require('/lib/xp/thymeleaf').render(resolve('customSearchresult.html'), m)
     }
 };
 
