@@ -10,7 +10,7 @@
               </input>
               <input name="autoComplete" type="checkbox">
                   <label>Auto complete.</label>
-                  <!-- <help-text>Note: Newly enabled or added autocompletions may take several hours to appear.</help-text> -->
+                  <help-text>Note: Newly enabled or added autocompletions may take several hours to appear.</help-text>
                   <occurrences minimum="0" maximum="1"/>
               </input>
             </items>

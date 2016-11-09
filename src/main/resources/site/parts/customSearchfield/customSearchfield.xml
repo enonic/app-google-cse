@@ -1,4 +1,14 @@
 <part>
     <display-name>CSE custom search field</display-name>
-    <config/>
+    <config>
+        <field-set name="options">
+          <label>Options</label>
+          <items>
+              <input name="searchResultPageId" type="ContentSelector">
+                  <label>Optional search result page</label>
+                  <occurrences minimum="0" maximum="1"/>
+              </input>
+            </items>
+        </field-set>
+    </config>
 </part>

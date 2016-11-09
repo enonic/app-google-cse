@@ -1,10 +1,10 @@
 
 <div class="gss-search-field">
-    <gss data-th-if="${resultPageUrl}" data-th-remove="tag">Google search placeholder
-        <gcse:searchbox-only data-th-attr="__${attributes}__"></gcse:searchbox-only>
+    <gss data-th-if="${resultPageUrl}" data-th-remove="tag">
+        <gcse:searchbox-only data-th-attr="__${attributes}__">Google search placeholder</gcse:searchbox-only>
     </gss>
 
     <gss data-th-unless="${resultPageUrl}" data-th-remove="tag">
-        <gcse:search data-th-attr="__${attributes}__"></gcse:search>
+        <gcse:search data-th-attr="__${attributes}__">Google search placeholder</gcse:search>
     </gss>
 </div>

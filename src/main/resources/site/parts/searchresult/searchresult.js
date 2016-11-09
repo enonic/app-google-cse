@@ -2,7 +2,7 @@ var lib = {
     thymeleaf: require('/lib/xp/thymeleaf'),
     util: require('/lib/enonic/util'),
     portal: require('/lib/xp/portal'),
-    gss: require('/lib/gss'),
+    cse: require('/lib/cse'),
     gu: require('cse-util')
 }
 
@@ -18,10 +18,11 @@ exports.get = function( req ){
     var sc = lib.portal.getSiteConfig();
     var c = lib.portal.getContent();
 
-    var result = lib.gss.search({
+    var result = lib.cse.search({
         googleApiKey: sc.googleApiKey,
-        gssSearchEngineId: sc.gssSearchEngineId,
-        query: "contenttype"
+        googleCustomSearchEngineId: sc.googleCustomSearchEngineId,
+        query: "contenttype",
+        q: req.params.q? req.params.q: "",
     });
 
     var params = {};
@@ -29,8 +30,8 @@ exports.get = function( req ){
     return {
         body: lib.thymeleaf.render(settings.view, params),
         pageContributions: {
-            headEnd: sc.gssSearchEngineId ? lib.gu.getHeaderScript({
-                gssSearchEngineId: sc.gssSearchEngineId
+            headEnd: sc.googleCustomSearchEngineId ? lib.gu.getHeaderScript({
+                googleCustomSearchEngineId: sc.googleCustomSearchEngineId
             }) : null
         }
     }

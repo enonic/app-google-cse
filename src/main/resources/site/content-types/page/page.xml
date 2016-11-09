@@ -1,6 +1,0 @@
-<content-type>
-  <display-name>Page</display-name>
-   <super-type>base:structured</super-type>
-   <allow-child-content>true</allow-child-content>
-   <form/>
-</content-type>
