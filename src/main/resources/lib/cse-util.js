@@ -1,7 +1,7 @@
 
 exports.isSet = function(v) {
     return v !== null && typeof v !== 'undefined';
-}
+};
 
 exports.required = function(params, name) {
     var value = params[name];
@@ -10,7 +10,7 @@ exports.required = function(params, name) {
     }
 
     return value;
-}
+};
 
 exports.getHeaderScript = function(p){
 
@@ -25,4 +25,4 @@ exports.getHeaderScript = function(p){
       var s = document.getElementsByTagName('script')[0]; \
       s.parentNode.insertBefore(gcse, s); \
   })()</script>";
-}
+};
