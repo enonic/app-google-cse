@@ -20,35 +20,38 @@ exports.get = function( req ){
     });
 
     var searchResult = JSON.parse(result.body);
-
     var body = "";
 
-    if(cc.resultfield){
-        var hits = mapResultToConfiguratedFields({
-            fields: lib.util.data.forceArray(cc.resultfield),
-            items: searchResult.items
-        });
+
+    if (searchResult.error) {
+        body = '<p>' + searchResult.error.message + '</p>';
+    }
+    else {
+        if(cc.resultfield){
+            var hits = mapResultToConfiguratedFields({
+                fields: lib.util.data.forceArray(cc.resultfield),
+                items: searchResult.items
+            });
 
 
-        var paginationData = createPaginationData({
-            sr: searchResult,
-            cc: cc
-        });
+            var paginationData = createPaginationData({
+                sr: searchResult,
+                cc: cc
+            });
 
-        var m = {
-            hits: hits,
-            wrapper: cc.wrapper && cc.wrapper.length ? cc.wrapper : 'wrapper-div',
-            wrapperClass: cc.classes,
-            pagination: paginationData
+            var m = {
+                hits: hits,
+                wrapper: cc.wrapper && cc.wrapper.length ? cc.wrapper : 'wrapper-div',
+                wrapperClass: cc.classes,
+                pagination: paginationData
 
-        };
+            };
 
-        lib.util.log(m);
+            body = lib.thymeleaf.render(resolve('customSearchresult.html'), m);
 
-        body = lib.thymeleaf.render(resolve('customSearchresult.html'), m);
-
-    } else {
-        body = lib.thymeleaf.render(resolve('emptyCustomSearchResult.html'));
+        } else {
+            body = lib.thymeleaf.render(resolve('emptyCustomSearchResult.html'));
+        }
     }
 
     return {
