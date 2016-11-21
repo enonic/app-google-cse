@@ -1,5 +1,4 @@
 <section>
-
     <include data-th-replace="fragment-wrappers.html :: __${wrapper}__ (${hits}, ${wrapperClass})" />
     <ul data-th-if="${pagination} and ${pagination.show}" class="cse-pagination">
         <li data-th-if="${pagination.previous}" ><a data-th-href="${pagination.previous.url}" data-th-text="${pagination.previous.text}"></li>

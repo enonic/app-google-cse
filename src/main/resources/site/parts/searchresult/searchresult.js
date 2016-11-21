@@ -2,13 +2,13 @@ var lib = {
     thymeleaf: require('/lib/xp/thymeleaf'),
     util: require('/lib/enonic/util'),
     portal: require('/lib/xp/portal'),
-    cse: require('/lib/cse'),
-    gu: require('cse-util')
+    cse: require('/lib/enonic/google-cse/cse'),
+    gu: require('/lib/cse-util')
 }
 
 var settings = {
     view: resolve('searchresult.html')
-}
+};
 
 /*
 *   GET

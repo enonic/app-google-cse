@@ -1,7 +1,7 @@
 var lib = {
     portal: require('/lib/xp/portal'),
-    gu: require('cse-util')
-}
+    gu: require('/lib/cse-util')
+};
 
 
 exports.get = function(){

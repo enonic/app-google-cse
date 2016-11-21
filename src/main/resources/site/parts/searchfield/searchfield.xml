@@ -7,6 +7,9 @@
               <input name="searchResultPageId" type="ContentSelector">
                   <label>Optional search result page</label>
                   <occurrences minimum="0" maximum="1"/>
+                  <config>
+                      <relationshipType>system:reference</relationshipType>
+                  </config>
               </input>
               <input name="autoComplete" type="checkbox">
                   <label>Auto complete.</label>

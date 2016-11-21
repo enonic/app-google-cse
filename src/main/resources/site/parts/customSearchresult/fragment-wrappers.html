@@ -15,18 +15,14 @@
 </ul>
 
 
-<fragment data-th-fragment="wrapper-article (items, wrapperClass)" data-th-remove="tag">
-    <each data-th-each="item : ${items}" data-th-remove="tag">
-        <article data-th-class="${wrapperClass}">
-            <include data-th-replace="site/parts/customSearchresult/fragment-fields :: field (${item})" />
-        </article>
-    </each>
-</fragment>
+<div data-th-fragment="wrapper-article (items, wrapperClass)" data-th-remove="tag">
+    <article data-th-each="item : ${items}" data-th-class="${wrapperClass}">
+        <include data-th-replace="site/parts/customSearchresult/fragment-fields :: field (${item})" />
+    </article>
+</div>
 
 <div data-th-fragment="wrapper-div (items, wrapperClass)" data-th-remove="tag">
-    <each data-th-each="item : ${items}" data-th-remove="tag">
-        <div data-th-class="${wrapperClass}">
-            <include data-th-replace="site/parts/customSearchresult/fragment-fields :: field (${item})" />
-        </div>
-    </each>
+    <div data-th-each="item : ${items}" data-th-class="${wrapperClass}">
+        <include data-th-replace="site/parts/customSearchresult/fragment-fields :: field (${item})" />
+    </div>
 </div>

@@ -1,10 +1,10 @@
 var lib = {
     thymeleaf: require('/lib/xp/thymeleaf'),
     portal: require('/lib/xp/portal'),
-    cse: require('/lib/cse'),
-    cseutil: require('cse-util'),
+    cse: require('/lib/enonic/google-cse/mockcse'),
+    cseutil: require('/lib/cse-util'),
     util: require('/lib/enonic/util')
-}
+};
 
 
 exports.get = function( req ){
@@ -30,18 +30,21 @@ exports.get = function( req ){
         });
 
 
-        var paninationData = createPageinationData({
+        var paginationData = createPaginationData({
             sr: searchResult,
             cc: cc
         });
 
         var m = {
             hits: hits,
-            wrapper: cc.wrapper,
+            wrapper: cc.wrapper && cc.wrapper.length ? cc.wrapper : 'wrapper-div',
             wrapperClass: cc.classes,
-            pagination: paninationData
+            pagination: paginationData
 
         };
+
+        lib.util.log(m);
+
         body = lib.thymeleaf.render(resolve('customSearchresult.html'), m);
 
     } else {
@@ -55,7 +58,7 @@ exports.get = function( req ){
 
 
 
-function createPageinationData(p){
+function createPaginationData(p){
 
     if( !lib.cseutil.isSet(p.cc.pagination) || !p.cc.pagination.show ){
         return {}
