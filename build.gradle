@@ -19,7 +19,7 @@ dependencies {
     include "com.enonic.lib:lib-thymeleaf:2.0.0-B1"
     include 'com.enonic.lib:lib-http-client:2.0.0-B1'
     include 'com.enonic.lib:lib-util:2.0.0-B1'
-    include "com.enonic.lib:google-cse:2.0.0-B1"
+    include "com.enonic.lib:lib-google-cse:2.0.0-B1"
 }
 
 repositories {
