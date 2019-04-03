@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-  <config>
+  <form>
       <field-set name="config">
       <label>Config</label>
       <items>
@@ -14,5 +14,5 @@
         </input>
       </items>
     </field-set>
-  </config>
+  </form>
 </site>

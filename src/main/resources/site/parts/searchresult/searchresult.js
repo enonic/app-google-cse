@@ -1,8 +1,8 @@
 var lib = {
-    thymeleaf: require('/lib/xp/thymeleaf'),
-    util: require('/lib/enonic/util'),
+    thymeleaf: require('/lib/thymeleaf'),
+    util: require('/lib/util'),
     portal: require('/lib/xp/portal'),
-    cse: require('/lib/enonic/google-cse/cse'),
+    cse: require('/lib/cse'),
     gu: require('/lib/cse-util')
 }
 
