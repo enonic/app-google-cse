@@ -6,6 +6,7 @@ https://market.enonic.com/vendors/enonic/com.enonic.app.google.cse
 
 | App version | Required XP version |
 | ----------- | ------------------- |
+| 2.0.0 | 7.0.0 |
 | 1.0.0 | 6.6.0 |
 
 

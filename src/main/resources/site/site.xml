@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-  <config>
-      <field-set name="config">
+  <form>
+    <field-set>
       <label>Config</label>
       <items>
         <input type="TextLine" name="googleApiKey">
@@ -14,5 +14,5 @@
         </input>
       </items>
     </field-set>
-  </config>
+  </form>
 </site>

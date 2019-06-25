@@ -1,57 +1,28 @@
-buildscript {
-    repositories {
-        mavenLocal()
-
-        jcenter()
-        maven { url 'http://repo.enonic.com/public' }
-
-    }
-
-    dependencies {
-        classpath "com.enonic.xp:gradle-plugin:${xpVersion}"
-
-    }
+plugins {
+    id 'com.enonic.xp.app' version '2.0.0'
+    id 'maven-publish'
 }
-
-apply plugin: 'com.enonic.xp.app'
-apply plugin: 'maven-publish'
-  
 
 app {
     name = project.appName
-    displayName = project.displayName
+    displayName = 'Google custom search engine'
     vendorName = 'Enonic'
-    vendorUrl = 'http://www.enonic.com'
+    vendorUrl = 'https://www.enonic.com'
+    systemVersion = "${xpVersion}"
 }
 
 dependencies {
-    compile "com.enonic.xp:core-api:${xpVersion}"
-    compile "com.enonic.xp:portal-api:${xpVersion}"
+    compile "com.enonic.xp:script-api:${xpVersion}"
     include "com.enonic.xp:lib-content:${xpVersion}"
     include "com.enonic.xp:lib-portal:${xpVersion}"
-    include "com.enonic.xp:lib-thymeleaf:${xpVersion}"
-    include "com.enonic.xp:lib-http-client:${xpVersion}"
-    include "com.enonic.lib:util:1.1.1"
-    include "com.enonic.lib:google-cse:1.0.0"
+    include 'com.enonic.lib:lib-http-client:2.0.0'
+    include "com.enonic.lib:lib-google-cse:2.0.0"
+    include "com.enonic.lib:lib-thymeleaf:2.0.0"
+    include 'com.enonic.lib:lib-util:2.0.0'
 }
 
 repositories {
     mavenLocal()
     jcenter()
-    maven {
-        url 'http://repo.enonic.com/public'
-    }
-}
-
-publishing {
-    publications {
-        mavenJava( MavenPublication ) {
-            from components.java
-        }
-    }
-    repositories {
-        maven {
-            url 'http://repo.enonic.net/artifactory/public'
-        }
-    }
+    xp.enonicRepo()
 }

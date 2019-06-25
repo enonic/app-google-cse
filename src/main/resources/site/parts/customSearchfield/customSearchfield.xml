@@ -1,6 +1,6 @@
 <part>
     <display-name>CSE custom search field</display-name>
-    <config>
+  <form>
         <field-set name="options">
           <label>Options</label>
           <items>
@@ -10,5 +10,5 @@
               </input>
             </items>
         </field-set>
-    </config>
+  </form>
 </part>

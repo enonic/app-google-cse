@@ -1,6 +1,6 @@
 <part>
     <display-name>CSE custom search result</display-name>
-    <config>
+  <form>
         <field-set name="general">
             <label>General</label>
             <items>
@@ -95,5 +95,5 @@
                 </input-->
             </items>
         </item-set>
-    </config>
+  </form>
 </part>

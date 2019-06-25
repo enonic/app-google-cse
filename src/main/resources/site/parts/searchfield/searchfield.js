@@ -1,5 +1,5 @@
 var lib = {
-    thymeleaf: require('/lib/xp/thymeleaf'),
+    thymeleaf: require('/lib/thymeleaf'),
     portal: require('/lib/xp/portal'),
     gu: require('/lib/cse-util')
 }
