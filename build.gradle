@@ -16,7 +16,7 @@ dependencies {
     compile "com.enonic.xp:script-api:${xpVersion}"
     include "com.enonic.xp:lib-content:${xpVersion}"
     include "com.enonic.xp:lib-portal:${xpVersion}"
-    include 'com.enonic.lib:lib-http-client:3.0.0'
+    include 'com.enonic.lib:lib-http-client:3.1.0'
     include "com.enonic.lib:lib-google-cse:2.0.0"
     include "com.enonic.lib:lib-thymeleaf:2.0.0"
     include 'com.enonic.lib:lib-util:2.0.0'
