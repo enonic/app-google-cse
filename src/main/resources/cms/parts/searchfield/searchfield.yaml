@@ -1,0 +1,20 @@
+kind: "Part"
+title: "CSE search field"
+form:
+  - type: "FieldSet"
+    label: "Options"
+    items:
+      - type: "ContentSelector"
+        name: "searchResultPageId"
+        label: "Optional search result page"
+        occurrences:
+          min: 0
+          max: 1
+        relationshipType: "system:reference"
+      - type: "CheckBox"
+        name: "autoComplete"
+        label: "Auto complete."
+        helpText: "Note: Newly enabled or added autocompletions may take several hours to appear."
+        occurrences:
+          min: 0
+          max: 1

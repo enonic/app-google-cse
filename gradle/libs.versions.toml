@@ -1,0 +1,11 @@
+[versions]
+http-client   = "3.2.2"
+google-cse    = "2.0.0"
+thymeleaf     = "3.0.0-SNAPSHOT"
+util          = "3.1.1"
+
+[libraries]
+lib-http-client = { module = "com.enonic.lib:lib-http-client", version.ref = "http-client" }
+lib-google-cse  = { module = "com.enonic.lib:lib-google-cse",  version.ref = "google-cse" }
+lib-thymeleaf   = { module = "com.enonic.lib:lib-thymeleaf",   version.ref = "thymeleaf" }
+lib-util        = { module = "com.enonic.lib:lib-util",        version.ref = "util" }
