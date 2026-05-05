@@ -1,0 +1,5 @@
+kind: "Application"
+title: "Google custom search engine"
+description: "Get Google custom search engine on your website."
+vendorName: "Enonic"
+vendorUrl: "https://www.enonic.com"

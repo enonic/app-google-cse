@@ -1,0 +1,121 @@
+kind: "Part"
+title: "CSE custom search result"
+form:
+  - type: "FieldSet"
+    label: "General"
+    items:
+      - type: "ComboBox"
+        name: "wrapper"
+        label: "Wrapper"
+        occurrences:
+          min: 0
+          max: 1
+        options:
+          - value: "wrapper-article"
+            label: "article"
+          - value: "wrapper-div"
+            label: "div"
+          - value: "wrapper-ol"
+            label: "ol > li"
+          - value: "wrapper-ul"
+            label: "ul > li"
+      - type: "TextLine"
+        name: "classes"
+        label: "Classes"
+        occurrences:
+          min: 0
+          max: 1
+  - type: "ItemSet"
+    name: "resultfield"
+    label: "Result field"
+    occurrences:
+      min: 0
+      max: 0
+    items:
+      - type: "ComboBox"
+        name: "field"
+        label: "Field"
+        occurrences:
+          min: 0
+          max: 1
+        options:
+          - value: "cacheId"
+            label: "Cache Id"
+          - value: "displayLink"
+            label: "Display link"
+          - value: "formattedUrl"
+            label: "Formatted Url"
+          - value: "htmlTitle"
+            label: "Html title"
+          - value: "htmlSnippet"
+            label: "Html Snippet"
+          - value: "htmlFormattedUrl"
+            label: "Html formatted url"
+          - value: "kind"
+            label: "Kind"
+          - value: "link"
+            label: "Link"
+          - value: "title"
+            label: "Title"
+          - value: "snippet"
+            label: "Snippet"
+      - type: "ComboBox"
+        name: "htmltag"
+        label: "Html tag to represent field"
+        occurrences:
+          min: 0
+          max: 1
+        options:
+          - value: "h2"
+            label: "h2"
+          - value: "h3"
+            label: "h3"
+          - value: "h4"
+            label: "h4"
+          - value: "h5"
+            label: "h5"
+          - value: "h6"
+            label: "h6"
+          - value: "p"
+            label: "p"
+          - value: "span"
+            label: "span"
+          - value: "a"
+            label: "a"
+      - type: "CheckBox"
+        name: "clickable"
+        label: "Clickable"
+        occurrences:
+          min: 0
+          max: 1
+      - type: "TextLine"
+        name: "classes"
+        label: "Classes"
+        occurrences:
+          min: 0
+          max: 1
+  - type: "ItemSet"
+    name: "pagination"
+    label: "Pagination"
+    occurrences:
+      min: 0
+      max: 1
+    items:
+      - type: "CheckBox"
+        name: "show"
+        label: "Show pagination"
+        occurrences:
+          min: 0
+          max: 1
+      - type: "TextLine"
+        name: "previousText"
+        label: "Previous-link text"
+        occurrences:
+          min: 0
+          max: 1
+      - type: "TextLine"
+        name: "nextText"
+        label: "Next-link text"
+        occurrences:
+          min: 0
+          max: 1

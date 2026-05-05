@@ -1,0 +1,12 @@
+kind: "Part"
+title: "CSE custom search field"
+form:
+  - type: "FieldSet"
+    label: "Options"
+    items:
+      - type: "ContentSelector"
+        name: "searchResultPageId"
+        label: "Optional search result page"
+        occurrences:
+          min: 0
+          max: 1
