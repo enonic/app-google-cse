@@ -1,5 +1,5 @@
 [versions]
-http-client   = "3.2.2"
+http-client   = "4.0.0-SNAPSHOT"
 google-cse    = "2.0.0"
 thymeleaf     = "3.0.0-SNAPSHOT"
 util          = "4.0.0-SNAPSHOT"
