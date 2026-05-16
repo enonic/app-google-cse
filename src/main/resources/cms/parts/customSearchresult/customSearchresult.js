@@ -2,8 +2,7 @@ var lib = {
     thymeleaf: require('/lib/thymeleaf'),
     portal: require('/lib/xp/portal'),
     cse: require('/lib/cse'),
-    cseutil: require('/lib/cse-util'),
-    util: require('/lib/util')
+    cseutil: require('/lib/cse-util')
 };
 
 
@@ -29,7 +28,7 @@ exports.get = function( req ){
     else {
         if(cc.resultfield){
             var hits = mapResultToConfiguratedFields({
-                fields: lib.util.data.forceArray(cc.resultfield),
+                fields: (Array.isArray(cc.resultfield) ? cc.resultfield : [cc.resultfield]),
                 items: searchResult.items
             });
 
