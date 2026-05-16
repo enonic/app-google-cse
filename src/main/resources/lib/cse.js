@@ -1,6 +1,3 @@
-// Vendored from https://github.com/enonic-archive/lib-google-cse (v2.0.0).
-// Original source licensed under the Apache License, Version 2.0.
-
 var lib = {
     http: require('/lib/http-client')
 };
