@@ -10,7 +10,6 @@ dependencies {
     include xplibs.portal
     include xplibs.io
     include libs.lib.http.client
-    include libs.lib.google.cse
     include libs.lib.thymeleaf
 }
 
