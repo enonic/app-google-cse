@@ -2,10 +2,8 @@
 http-client   = "4.0.0-SNAPSHOT"
 google-cse    = "2.0.0"
 thymeleaf     = "3.0.0-SNAPSHOT"
-util          = "4.0.0-SNAPSHOT"
 
 [libraries]
 lib-http-client = { module = "com.enonic.lib:lib-http-client", version.ref = "http-client" }
 lib-google-cse  = { module = "com.enonic.lib:lib-google-cse",  version.ref = "google-cse" }
 lib-thymeleaf   = { module = "com.enonic.lib:lib-thymeleaf",   version.ref = "thymeleaf" }
-lib-util        = { module = "com.enonic.lib:lib-util",        version.ref = "util" }

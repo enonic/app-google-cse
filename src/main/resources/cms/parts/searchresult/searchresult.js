@@ -1,6 +1,5 @@
 var lib = {
     thymeleaf: require('/lib/thymeleaf'),
-    util: require('/lib/util'),
     portal: require('/lib/xp/portal'),
     cse: require('/lib/cse'),
     gu: require('/lib/cse-util')
@@ -39,7 +38,7 @@ exports.get = function( req ){
 
 /* Soon to be used */
 function hasComponent(page, componentName){
-    var regions = lib.util.data.forceArray(page.regions);
+    var regions = (Array.isArray(page.regions) ? page.regions : [page.regions]);
     for(var i = 0; i < regions.length; i ++){
         var components = lig.util.data.forecArray(regions[i].components);
     }
